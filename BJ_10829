@@ -1,0 +1,53 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+public class BJ_10829 {
+
+	public static void main(String[] args) {
+///////////stack 사용///////
+		Scanner sc = new Scanner(System.in);
+		long n = sc.nextLong();
+		
+		Stack<String> answer = new Stack<String>();
+		
+		long a = 0;
+		while(n/2 != 0) {
+			
+			answer.push(Long.toString(n%2));
+			a=n/2;
+			n=n/2;
+			
+			if(a==1) answer.push("1");
+		}
+		while(!answer.isEmpty())
+		System.out.print(answer.pop());
+		
+/////////////////StringBuffer 사용/////////////////
+	/*	Scanner sc = new Scanner(System.in);
+
+		long n = sc.nextLong();
+		
+		String Binary = "";
+		long a = 0;
+		
+		while(n/2 != 0) {
+			
+			Binary+=Long.toString(n%2);
+			a=n/2;
+			n=n/2;
+			
+			if(a==1) Binary+="1";
+		}
+			
+		StringBuffer sb = new StringBuffer(Binary);
+		String reversedStr = sb.reverse().toString();
+		
+		System.out.println(reversedStr);*/
+
+//////////////////세번째 방법//////////////	
+
+//		String Binary = Long.toBinaryString(n);
+//		
+//		System.out.println(Binary);	
+	}
+}
